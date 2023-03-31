@@ -1,0 +1,24 @@
+This is the Sample App for Razorpay SDK Integration. Please replace the dynamic
+Below are the steps for implementing razorpay standard sdk:
+1. Add the below razorpay dependency:
+    // https://mvnrepository.com/artifact/com.razorpay/checkout
+    implementation 'com.razorpay:checkout:1.6.29'
+    You can find the latest version on the below URL:
+    https://razorpay.com/docs/payments/payment-gateway/android-integration/standard/build-integration/#11-install-razorpay-android-standard-sdk
+
+2. Add the below line in the Activity where razorpay checkout implemented:
+   Checkout.preload(applicationContext)
+   Checkout.sdkCheckIntegration(this)
+
+3. Implement 'PaymentResultWithDataListener' Interface and override the below methods:
+    a. onPaymentSuccess(razorpayPaymentID: String, paymentData: PaymentData)
+    b. fun onPaymentError(code: Int, p1: String, paymentData: PaymentData)
+
+4. Create Razorpay Order from your server end to razorpay dashboard
+
+5. Once the razorpay_order was created, execute razorpay checkout code
+
+6. Once the payment was successfully done and receive onPaymentSuccess response from razorpay sdk,
+   call your server API to verify and capture the payment
+
+7. After Verify and capture the payment execute your remaining business logic.
