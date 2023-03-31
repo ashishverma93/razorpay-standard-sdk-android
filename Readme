@@ -1,4 +1,4 @@
-This is the Sample App for Razorpay SDK Integration. Please replace the dynamic
+This is the Sample App for Razorpay SDK Integration. Please replace the dynamic values.
 Below are the steps for implementing razorpay standard sdk:
 1. Add the below razorpay dependency:
     // https://mvnrepository.com/artifact/com.razorpay/checkout
